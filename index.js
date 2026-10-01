@@ -1,38 +1,41 @@
 
-// history clear
-
-document.getElementById("btn-clear").addEventListener("click",function(){
-
-
-})
-
-
 
 // complete button function
-function handleTaskComplete (id
+function handleTaskComplete (id){
 
-){
     const btn =document.getElementById(id)
 btn.addEventListener("click", function(){
 alert("Board updated successfully");
 
+
     const taskElement =document.getElementById("task");
     const value = parseInt(taskElement . innerText);
+
+    
+if(value <= 0){
+        alert("No more tasks available!")
+         return;
+    }
+
     taskElement.innerText=value -1 ;
 
     const sumElement =document.getElementById("sum-element");
     const sumValue = parseInt(sumElement .innerText);
     sumElement.innerText=sumValue + 1 ;
 
+    //btn disable
     btn.disabled = true;
     btn.style.opacity = "0.5";
     btn.style.cursor = "not-allowed";
 
+    // notification 
+    const currentTime = new Date().toLocaleTimeString();
+    const container = document.getElementById("notification-container");
+    const P= document.createElement("P");
+    P.className = "mt-4 p-3 text-sm text-gray-700 ";
+    P.innerText = `You have Complete The Task Add Dark Mode at ${currentTime}`
 
-    if(taskElement > 0){
-        alert("always positive")
-         return;
-    }
+    container.appendChild(P);
 })
  
 }
@@ -47,34 +50,23 @@ handleTaskComplete("btn-6");
 
 
 
+// Discover
+
+document.getElementById("discover").addEventListener("click",function(){
+window.location.href="main.html";
+
+})
 
 
+// history clear
+
+document.getElementById("btn-clear").addEventListener("click",function(){
+const container = document.getElementById("notification");
+const container1 = document.getElementById("notification-container");
+
+ container.innerHTML =" ";
+ container1.innerHTML =" ";
+})
 
 
-
-// document.getElementById("complete-btn").addEventListener("click",function(){
-//      alert("Board update successfully")
-//   if(value="123"){
-//     const result=document.getElementById("task").innerText;
-//     const converted = parseInt(result);
-//     const final= converted  - 1;
-    
-//     document.getElementById("task").innerText = final ;
-    
-//     const add = document.getElementById("sum-element").innerText;
-//     const convertedvalu = parseInt(add);
-//     const sum= convertedvalu + 1; 
-
-//     document.getElementById("sum-element").innerText = sum ;
-
-//      const btn = document.getElementById("complete-btn");
-//      btn.disabled = true;
-//     btn.style.opacity = "0.5";
-//     btn.style.cursor = "not-allowed";
-//   }
-//    else{
-//     alert("error");
-//    }
-
-// })
 

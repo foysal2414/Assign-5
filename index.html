@@ -57,10 +57,10 @@
                    
 
                      <!-- Discover card-->
-                        <div class=" flex  p-6 mt-10 gap-10 w-96 rounded-md bg-linear-to-r from-blue-500 to-indigo-400">
+                        <button id="discover"><div class=" flex  p-6 mt-10 gap-10 w-96 rounded-md bg-linear-to-r from-blue-500 to-indigo-400">
                          <div><img src="./assets/board.png" alt=""></div>
                          <div class="font-bold text-2xl"><h1>Discover Something  New Today!</h1></div>
-                        </div>
+                        </div></button>
                     
 
                         <!-- date card -->
@@ -152,15 +152,17 @@
 
                  <!-- Clear History -->
 
-                <div class="bg-[#F4F7FF]  rounded-md mx-5 my-20">
+                <div class="bg-[#F4F7FF]  rounded-md mx-5 my-20 w-96">
                     <div>
                         <div class="flex justify-center items-center gap-3 p-5 ">
                             <img src="./assets/activity.png" alt="">
                         <h3>Activity Log</h3>
                         </div>
-                        <div class="p-5 text-center"><button id="btn-clear" class="btn btn-primary rounded-xl ">Clear History</button>
-                        <p  class="mt-10">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                        <div  class="p-5 text-center"><button id="btn-clear" class="btn btn-primary rounded-xl ">Clear History</button></div>
+                        <div id="notification" class="p-5 text-center" ><p  class="mt-10">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
                         <p class="mt-10">You have Complete The Task Add Dark Mode at 12:48:15 PM</p></div>
+
+                        <div id="notification-container" class="p-5 text-center"></div>
                     </div>
                 </div>
 
