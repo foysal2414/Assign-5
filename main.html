@@ -3,11 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Blogs</title>
+
+    <!-- daysi ui -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- font code -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
-<body class="bg-slate-100 min-h-screen p-4 md:p-8">
-   
-   
+<body>
+  <header>
+        <nav class="m-10  bg-base-300">
+            <div class="navbar  shadow-sm">
+  <div class="flex-1">
+    <div class="flex pl-5 text-center">
+        <img src="./assets/logo.png" alt="">
+    <a class="btn btn-ghost text-3xl">Dev<span class="font-bold">Board</span></a>
+    </div>
+  </div>
+  
+    <button id="back-btn" class="btn btn-primary rounded-xl">Back to Desk</button>
+  
+</div>
+ </nav>
     
+ <h1 class="mt-10 text-3xl font-bold text-center">Blogs</h1>
+    
+ <div class="m-10 p-5 bg-base-300">
+    <h3 class="font-bold text-xl">Question-1: What are the different ways to select an element in the DOM?</h3>
+    <p class="mt-5 ">Elements can be selected using modern CSS selectors like querySelector() (first match) and querySelectorAll() (all matches). You can also use traditional methods like getElementById(), getElementsByClassName(), and getElementsByTagName(). Additionally, DOM traversal properties like parentElement, children, and nextElementSibling allow relative selection.
+
+    </p>
+ </div>
+
+ <div class="m-10 p-5 bg-base-300">
+    <h3 class="font-bold text-xl">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
+    <p class="mt-5 ">innerHTML renders HTML tags inside an element as formatted markup, innerText extracts only the visible human-readable text while respecting CSS styles (like hiding display: none content), and textContent returns all raw text from the element—including hidden elements and script tags—without evaluating styling.
+    </p>
+ </div>
+
+ <div class="m-10 p-5 bg-base-300">
+    <h3 class="font-bold text-xl">Question-3: What is event delegation in the DOM?</h3>
+    <p class="mt-5 ">EEvent delegation is a design pattern in JavaScript where a single event listener is attached to a parent element instead of adding multiple listeners to individual child elements. It leverages the concept of event bubbling (where events trigger on a child and bubble up through parent nodes), allowing the parent to catch and handle events triggered by any present or dynamically added children using event.target.
+    </p>
+ </div>
+
+ <div class="m-10 p-5 bg-base-300">
+    <h3 class="font-bold text-xl">Question-4: What is event bubbling in the DOM?</h3>
+    <p class="mt-5 ">Event bubbling is a mechanism in the DOM where an event triggered on a specific target element first executes on that element, and then propagates ("bubbles") upward through its parent elements in the DOM hierarchy all the way up to the document object. This process allows parent elements to listen for and handle events originating from any of their child elements.   
+    </p>
+ </div>
+
+ <div class="m-10 p-5 bg-base-300">
+    <h3 class="font-bold text-xl">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
+    <p class="mt-5 ">You create new elements using document.createElement('tagName'), add them to the DOM by calling parentElement.appendChild(newElement) or parentElement.append(newElement), and remove them using element.remove() or parentElement.removeChild(element).
+    </p>
+ </div>
+
+
+
+    <script src="./main.js"></script>
 </body>
 </html>
